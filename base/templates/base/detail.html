@@ -1,0 +1,49 @@
+
+{% extends 'base/base.html' %}
+
+Task: {{List.title}}
+
+{% block title %}{{List.title}} Details{% endblock title %}
+
+{% block style %}
+<style>
+*{
+    font-family: 'Exo 2', sans-serif;
+font-family: 'McLaren', cursive;
+   font-size:20px;
+}
+
+span{
+    text-transform:uppercase;
+    font-weight: bolder;
+}
+{% endblock style %}
+</style>
+{% block body %}
+
+<h3 class="m-3 center">{{List.title}} Details</h3>
+
+<div class="card card-border">
+
+    {% if List.description %}
+   <p><span> Details:</span> {{List.description}} </p>
+    
+    {% else %}
+    <p class="text"> There is no description for the Task</p>
+    
+    {% endif %}
+     <p><span> Title: </span>{{List.title}} </p>
+   
+    <p><span>Complete:</span> {{List.complete}}  </p>
+
+    
+    <p><span>Created:</span> {{List.created}}  </p>
+
+
+
+
+</div>
+
+{% endblock body %}
+
+

@@ -1,0 +1,11 @@
+
+
+<a href="{% url 'index' %}">Go Back</a>
+<form method="POST">
+{% csrf_token %}
+
+<p>Are you sure you wanna delete <b>{{List.title|title}}?</b></p>
+
+<button type="submit" value="delete">Delete</button>
+
+</form>
